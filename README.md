@@ -1,23 +1,38 @@
 
-# MOVIE LISTING API
-## CAPSTONE PROJECT BY SIXTUS NNANNA OMEJE
+# 🎬 Movie Listing API
 
-This API is my third/last term project in altschool.
+A RESTful API for managing movies — built with FastAPI as a capstone project by Sixtus Nnanna Omeje.
+This API allows users to register, authenticate, manage movies, comments, nested comments, and ratings with full CRUD operations.
 
-## Table of Contents
+## 🚀 Features
 
-1. [Installation](#installation)
-2. [API Endpoints](#api-endpoints)
-3. [Testing](#configuration)
+### -User Authentication
+    - Register new users
+    - Login with email & password
 
-## Installation
+### Movie Management
+    - List all movies
+    - Retrieve a movie by ID
+    -Create, update, delete movies
+
+### Comments
+    - Add comments to movies
+    - Retrieve comments for a movie
+    - Add nested replies to comments
+
+### Ratings
+    - Rate movies
+    - Retrieve average rating for a movie
+
+## 📦 Getting Started
 
 ### Prerequisites
+Make sure you have the following installed:
+    - Python 3.9+
+    -pip (Python package manager) 
 
-- Python 3.9 upto the lates version(Download from (#python.org))
-- DEPENDECIES (`pip install -r requirement.txt` to install all dependencies)
 
-### Steps
+### 🛠 Installation Steps
 
 1. **Clone the repository:**
 
@@ -54,63 +69,31 @@ This API is my third/last term project in altschool.
     ```
 
 ## API Endpoints
-### I have 12 Api endpoints
 
-1. **Signup-For signing up new users, its avaialable at :**
-    ```
-    http://localhost:8000/docs#/USER/signup_signup_post
-    ```
-2. **login-For authentication and authorisation of users, its avaialable at :**
-    ```
-    http://localhost:8000/docs#/USER//login_login_post
-    ```
-3. **Get Movies - this end points get the total number of movies avaialable:**
-    ```
-    http://localhost:8000/docs#/MOVIE/get__movies_Movies__get
-    ```
+The API includes the following endpoints (available in the Swagger docs):
 
-4. **Get Movie by Id - GET movie/{movie_id}  avaialable at:**
-    ```
-    http://localhost:8000/docs#/MOVIE/get_movie_by_id_movie__movie_id__get
-    ```
+### 🔐 User
 
-5. **Create Movie: POST /movies/create :**
-    ```
-    http://localhost:8000/docs#/MOVIE/create_movie_movies_create_post
-    ```
+- ** POST** ``/signup`` - Create a new user account
+- ** POST** ``/signup`` - Create a new user account
 
-6. **Update Movie PUT movies/{movie_id} :**
-    ```
-    http://localhost:8000/docs#/MOVIE/update_movie_movies__movie_id__put
-    ```
+###  🎥 Movies
 
-7. **Delete Post: DELETE movies/{movie_id}**
-    ```
-    http://localhost:8000/docs#/MOVIE/delete__movie_movies__movie_id__delete
-    ```
+- GET ``//movies/`` - List all movies
+- GET ``//movies/{movie_id}`` - Get movie by ID
+- POST ``/movies/create`` – Create a new movie
+- PUT ``/movies/{movie_id}`` – Update existing movie
+- DELETE ``/movies/{movie_id}`` – Delete a movie
 
-8. **Adding comment to a movie : POST "/movies/{movie_id}/create_comment",**
-    ```
-    http://localhost:8000/docs#/COMMENT/create_comment_movies__movie_id__create_comment_post
-    ```
+### 🗨️ Comments
 
-9. **Getting comments of a movie using movie id : GET /movies/{movie_id}/comments**
-    ```
-    http://localhost:8000/docs#/COMMENT/get_comments_of_a_movie_movies__movie_id__comments_get
-    ```
-10. **Adding Nested comment to a comment: POST /comments/{comment_id}/comments**
-    ```
-    http://localhost:8000/docs#/NESTED%20COMMENTS/create_nested_comment_comments__comment_id__comments_post
-    ```
-11. **Rating a movie: POST /movie/{movie_id}/create_rating:**
-    ```
-    http://localhost:8000/docs#/RATING/create_movie_rating_movie__movie_id__create_rating_post
-    ```
+- POST ``/movies/{movie_id}/create_comment`` – Add a comment
+- GET ``/movies/{movie_id}/comments`` – List movie comments
+- POST ``/comments/{comment_id}/comments`` – Add nested comment
 
-12. **GET Rating of a movie : GET /movie/rating/{movie_id}**
-    ```
-    http://localhost:8000/docs#/RATING/get_movie_rating_movie_rating__movie_id__get
-    ```
+## ⭐ Ratings
+- POST ``/movie/{movie_id}/create_rating`` – Create a rating
+- GET ``/movie/rating/{movie_id}`` – Get movie rating
 
 
 ### Environment Variables
@@ -137,3 +120,15 @@ Create a `.env` file in the root directory and add your environment variables:
     pytest
     
     ```
+
+### 📌 Technologies Used
+
+- FastAPI – Backend framework
+- Uvicorn – Asynchronous server
+- SQLAlchemy – ORM for database interactions
+- Alembic – Database migrations
+- Pytest – Testing
+
+### Demo Link
+
+Visit the [DEMO LINK](https://capstone-main.onrender.com/docs)
