@@ -1,8 +1,9 @@
 
 # 🎬 Movie Listing API
 
-A RESTful API for managing movies — built with FastAPI as a capstone project by Sixtus Nnanna Omeje.
-This API allows users to register, authenticate, manage movies, comments, nested comments, and ratings with full CRUD operations.
+A production-ready RESTful API for managing movies, user interactions, and community engagement, built with FastAPI.
+
+This system enables users to register, authenticate, and interact with movie content through ratings, comments, and nested discussions, simulating real-world media platforms.
 
 ## 🚀 Features
 
